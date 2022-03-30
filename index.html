@@ -1,0 +1,75 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>[Test your SPEED] || [by Sawi]</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="css/all.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="game">
+			<div class="name">Typing Speed Test Game</div>
+			<div class="container">
+				<div class="message">
+					<span class="lvl"></span> هيكون عندك وقت لكل كلمة  
+					<span class="seconds"></span>
+					ثانية
+					انت اخترت مستواك
+				</div>
+				<div class="lvl-start ar">
+					<div class="level-div ar">
+						<select
+							class="
+							level
+							list-choice"
+							name="level"
+							id="level"
+							onchange="reportLevel();"
+						>
+							<option class="turtle ar" value="Turtle"><i class="fa-solid fa-pizza-slice ar dark"></i>علي الله خالص</option>
+							<option class="ar" value="Easy">علي قدي</option>
+							<option  class="ar Normal" selected value="Normal">انا تمام</option>
+							<option class="ar" value="Hard">تنين التنانين</option>
+						</select>
+					</div>
+					<div class="username">
+						<input	class="level username ar"	type="text"	id="username"	placeholder="اسم سيادتك"		onblur="userGet()"	/>
+					</div>
+					<div class="lang-div">
+						<select class="lang ar" id="lang">
+						<option value="Ar" class="ar"><span>عربي</span></option> 
+						<option value="En"><span>English</option> 
+						</select>
+					</div>
+					<div class="start">ابدأ</div>
+				</div>
+				<div class="the-word"></div>
+				<input type="text" class="input" />
+				<div class="upcoming-words">الكلمات هتظهر هنا</div>
+				<div class="control">
+					<div class="time">الوقت: <span></span> ثانية</div>
+					<div class="score">
+						النتيجة: <span class="got">0</span> من اجمالي : <span class="total"></span>
+					</div>
+				</div>
+				<div class="finish"></div>
+				<div class="pictures"></div>
+				<div class="history"></div>
+			</div>
+		</div>
+		<div class="name footer">&copy; Ahmed Elsawi &copy; 2022</div>
+		<script src="js/script.js"></script>
+		<script src="js/all.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

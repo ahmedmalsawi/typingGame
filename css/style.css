@@ -1,0 +1,344 @@
+:root {
+    --main-color: #2196f3;
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-family: "open sans", sans-serif; */
+    font-family: 'Almarai', sans-serif;
+    /* font-family: 'Almarai',sans-serif; */
+}
+
+.game {
+    background-color: #EEE;
+    min-height: calc(100vh - 50px);
+}
+
+.container {
+    margin: auto;
+    max-width: 900px;
+}
+
+.name {
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 50px;
+    background-color: var(--main-color);
+}
+
+.footer {
+    background-color: black;
+}
+
+.message {
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.message span {
+    /* background-color:white;
+    padding:15px;
+    margin:15px;
+    border-radius:6px;
+    text-align:center; */
+    font-weight: bold;
+    color: #009688;
+}
+
+.message span::before {
+    content: "[ ";
+    font-weight: bold;
+    color: #009688;
+}
+
+.message span::after {
+    content: " ]";
+    font-weight: bold;
+    color: #009688;
+}
+
+.lvl-start {
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.level-div,
+.lang-div {
+    background-color: #009688;
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    /* border: 1px solid var(--select-border); */
+    /* background-image: linear-gradient(to top, #f9f9f9, #fff 33%); */
+}
+
+.level::after,
+.lang::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.level,
+.lang {
+    font-weight: bold;
+    color: #009688;
+    appearance: none;
+    border: none;
+    padding: 0 1em 0 0;
+    /* padding: 1em; */
+    width: 100%;
+
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    text-align: center;
+    /* margin: 0; */
+    /* outline: none; */
+    /* background-color: transparent; */
+}
+
+.level::-ms-expand,
+.lang::-ms-expand {
+    display: none;
+}
+
+.level::before,
+.level::after,
+.lang::before,
+.lang::after {
+    box-sizing: border-box;
+}
+
+.start {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #009688;
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.the-word {
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--main-color);
+    user-select: none;
+}
+
+.input {
+    margin: 15px 0;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    border: 3px solid var(--main-color);
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 6px;
+    caret-color: var(--main-color);
+}
+
+.input:focus {
+    outline: none;
+
+}
+
+.upcoming-words {
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.upcoming-words div {
+    margin: 4px;
+    background-color: var(--main-color);
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+}
+
+.control span {
+    font-weight: bold;
+    color: #009688;
+    font-size: 20px;
+}
+
+.finish {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding: 15px;
+}
+
+.finish .good {
+    color: var(--main-color);
+}
+
+.finish .bad {
+    color: red;
+}
+
+.ar {
+    font-family: 'Almarai', sans-serif;
+}
+
+.pictures {
+    display: flex;
+    max-width: 900px;
+    justify-content: center;
+}
+
+.img-bad,
+.img-good {
+    width: 900px;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+
+/* .turtle:hover::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f818";
+    color:red;
+} */
+
+.level.select {
+    color: red;
+}
+
+
+
+
+
+
+
+
+.list-choice {
+    width: 300px;
+    margin: 1em auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.list-choice input[type="text"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.list-choice-title {
+    width: 100%;
+    display: block;
+    background: #D8D8D8;
+    text-align: center;
+    padding: 0.55em 1em;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 0 #CACACA;
+    border-radius: 0.2em;
+}
+
+.list-choice:hover .list-choice-title {
+    border-radius: 0.2em 0.2em 0 0;
+}
+
+.list-choice-objects label:nth-last-of-type(1) span {
+    border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice input[type="radio"]+span {
+    color: rgb(0, 0, 0);
+    background: #009688;
+    padding: 0.55em 1em;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.list-choice-objects {
+    position: absolute;
+    top: 0;
+    padding-top: 2.1em;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 250ms ease;
+}
+
+.list-choice:hover .list-choice-objects input[type="radio"]+span {
+    position: relative;
+    top: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.list-choice:hover input[type="radio"]+span:hover {
+    background: #BBB;
+}
+
+.list-choice:hover input[type="radio"]:checked+span:hover {
+    background: #74D68E;
+}
+
+.list-choice input[type="radio"]:checked+span {
+    background: #74D68E;
+    position: absolute;
+    top: 0em;
+    border-radius: 0.2em;
+}
+
+.list-choice:hover input[type="radio"]:checked+span {
+    border-radius: 0;
+}
+
+.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked+span {
+    border-radius: 0 0 0.2em 0.2em;
+}
+
+.list-choice:hover .list-choice-objects {
+    max-height: 540px;
+}
